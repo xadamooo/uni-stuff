@@ -1,0 +1,42 @@
+<DOCTYPE html>
+  <html>
+      <head>
+          <title>Sterowanie</title>
+          <meta charset="utf-8">
+      </head>
+      <body>
+          <form action="/get-topic" method="POST">
+              <label for="topic">Topic:</label><br>
+              <input type="text" id="topic" name="topic"><br>
+              <input type="submit" value="Submit">
+          </form>
+          <form action="/get-freq" method="POST">
+              <label for="freq">Frequency:</label><br>
+              <input type="text" id="freq" name="freq"><br>
+              <input type="submit" value="Submit">
+          </form>
+          <form action="/get-prot" method="POST">
+              <label for="prot">Protocole:</label><br>
+              <input type="radio" id="http" name="prot" value="http"><br>
+              <label for="http">HTTP</label><br>
+              <input type="radio" id="mqtt" name="prot" value="mqtt"><br>
+              <label for="mqtt">MQTT</label><br>
+              <input type="submit" value="Submit">
+          </form>
+          <form action="/get-file" method="POST">
+            <label for="file">File:</label><br>
+            <input type="radio" id="f1" name="file" value="D:\PWR\Visual Studio\systemy_informatyczne_internetu_rzeczy\lista5\datasets\data1.csv"><br>
+            <label for="file1">FILE1</label><br>
+            <input type="radio" id="f2" name="file" value="D:\PWR\Visual Studio\systemy_informatyczne_internetu_rzeczy\lista5\datasets\data2.csv"><br>
+            <label for="file2">FILE2</label><br>
+            <input type="radio" id="f3" name="file" value="D:\PWR\Visual Studio\systemy_informatyczne_internetu_rzeczy\lista5\datasets\data3.csv"><br>
+            <label for="file3">FILE3</label><br>
+            <input type="radio" id="f4" name="file" value="D:\PWR\Visual Studio\systemy_informatyczne_internetu_rzeczy\lista5\datasets\data4.csv"><br>
+            <label for="file4">FILE4</label><br>
+            <input type="radio" id="f5" name="file" value="D:\PWR\Visual Studio\systemy_informatyczne_internetu_rzeczy\lista5\datasets\data5.csv"><br>
+            <label for="file5">FILE5</label><br>
+            <input type="submit" value="Submit">
+        </form>
+      </body>
+  </html>
+</DOCTYPE>
