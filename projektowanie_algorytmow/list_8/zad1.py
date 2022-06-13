@@ -72,7 +72,7 @@ class Node:
         self.left = left
         self.right = right
 
-    def show_graph(self):
+    def visualize(self):
         G = nx.Graph()
         depth = self.get_depth()
         paths = {}
@@ -134,7 +134,7 @@ class Node:
             z.value = y.value
 
     def repair_node(self, z):
-        y = copy.deepcopy(z)
+        y = copy.copy(z)
         self.remove(z)
         self.insert(Node(y.value, None, None, None))
 
@@ -150,13 +150,14 @@ class Node:
 
 
 if __name__ == "__main__":
-    tree = Node(15)
-    for _ in range(10):
-        num = random.randint(1, 30)
-        tree.insert(Node(num))
-    tree.show_graph()
+    # tree = Node(15)
+    # for _ in range(10):
+    #     num = random.randint(1, 30)
+    #     tree.insert(Node(num))
+    # tree.visualize()
 
     lst = [1, 3, 6, 11, 23, 14, 33, 19, 8]
     tree = bst_from_list(lst)
-    tree.show_graph()
-    print(check_bst(tree))
+    tree.visualize()
+    tree.repair_node(Node(6))
+    tree.visualize()
